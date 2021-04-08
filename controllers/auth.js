@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const User = require("../models/User");
 const keys = require('../config/keys');
 
+const errorHandler = require('../untils/errorHandler');
+
 module.exports.login = async function (req, res) {
     /**
      * @body email
@@ -64,7 +66,7 @@ module.exports.register = async function (req, res) {
             await user.save();
             res.status(200).json(user);
         } catch (e) {
-
+            errorHandler(res, e);
         }
     }
 }
