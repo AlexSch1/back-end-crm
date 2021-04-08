@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node index",
     "server": "nodemon index",
-    "client": "npm run start --prefix client",
-    "client-i": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client-ng": "npm run start --prefix client/angular",
+    "client-i-ng": "npm install --prefix client/angular",
+    "dev-ng": "concurrently \"npm run server\" \"npm run client/angular\""
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "concurrently": "^6.0.1"
   }
 }
