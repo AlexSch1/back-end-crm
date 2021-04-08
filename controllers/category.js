@@ -1,7 +1,6 @@
 const errorHandler = require("../untils/errorHandler");
 const Category = require('../models/Category');
 const Position = require('../models/Position');
-const { update } = require("./position");
 
 module.exports.getAll = async function(req, res) {
     try {
