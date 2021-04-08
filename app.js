@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 // const cors = require("cors");
 // const morgan = require("morgan");
 // const mongoose = require("mongoose");
@@ -24,8 +24,8 @@ const positionRoutes = require("./routes/position");
 //
 // app.use(morgan("dev"));
 // app.use('/uploads', express.static('uploads'))
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // app.use(cors());
 
 // Routes
