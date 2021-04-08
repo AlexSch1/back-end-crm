@@ -11,7 +11,7 @@ module.exports.create = async function (req, res) {
         }).save();
         res.status(201).json({ positions });
     } catch (e) {
-        errorHandler(res, error);
+        errorHandler(res, e);
     }
 };
 
@@ -23,7 +23,7 @@ module.exports.getByCategoryId = async function (req, res) {
         });
         res.status(200).json(positions);
     } catch (e) {
-        errorHandler(res, error);
+        errorHandler(res, e);
     }
 };
 
@@ -34,7 +34,7 @@ module.exports.remove = async function (req, res) {
             message: "OK",
         });
     } catch (e) {
-        errorHandler(res, error);
+        errorHandler(res, e);
     }
 };
 
@@ -53,6 +53,6 @@ module.exports.update = async function (req, res) {
         );
         res.status(200).json(position);
     } catch (e) {
-        errorHandler(res, error);
+        errorHandler(res, e);
     }
 };
