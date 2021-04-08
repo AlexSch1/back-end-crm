@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-// const passport = require('passport');
-//
+const passport = require('passport');
 const authRoutes = require("./routes/auth");
 const analyticsRoutes = require("./routes/analytics");
 const categoryRoutes = require("./routes/category");
@@ -19,9 +18,9 @@ mongoose.connect(keys.mongoURI, {
     .then(() => console.log('MongoDB connect'))
     .catch(error => console.error(error));
 
-// app.use(passport.initialize());
-// require('./middelware/passport')(passport);
-//
+app.use(passport.initialize());
+require('./middelware/passport')(passport);
+
 app.use(require("morgan")("dev"));
 // app.use('/uploads', express.static('uploads'))
 app.use(bodyParser.urlencoded({ extended: true }));
