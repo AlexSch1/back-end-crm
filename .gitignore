@@ -1,6 +1,7 @@
 /storybook-static
 screenshotTestsMatadata.json
 
+/client
 # Created by https://www.gitignore.io/api/node,angular,webstorm,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,angular,webstorm,visualstudiocode
 
