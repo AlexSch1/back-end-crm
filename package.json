@@ -8,7 +8,7 @@
     "server": "nodemon index",
     "client-ng": "npm run start --prefix client/angular",
     "client-i-ng": "npm install --prefix client/angular",
-    "dev-ng": "concurrently \"npm run server\" \"npm run client/angular\""
+    "dev-ng": "concurrently \"npm run server\" \"npm start client/angular\""
   },
   "author": "",
   "license": "ISC",
